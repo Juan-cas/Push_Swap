@@ -11,7 +11,7 @@
 
 typedef struct t_list {
   struct t_list *next;
-  int data;
+  long data;
   int pos;
   int fpos;
   struct t_list *stackA;
@@ -20,57 +20,53 @@ typedef struct t_list {
 
 void push_swap(t_list **stackA, t_list **stackB);
 
-// movements
-void sa(t_list **stackA);
-void sb(t_list **stackB);
-void ss(t_list **stackA, t_list **stackB);
-void pb(t_list **stackA, t_list **stackB);
-void pa(t_list **stackA, t_list **stackB);
-void ra(t_list **stackA);
-void rb(t_list **stackB);
-void rr(t_list **stackA, t_list **stackB);
-void rra(t_list **stackA);
-void rrb(t_list **stackB);
-void rrr(t_list **stackA, t_list **stackB);
-
 // error handling.
-void ft_error();
-void charfree(char **str);
-void lstclear(t_list **lst);
+void  ft_error();
+void  charfree(char **str);
+void  lstfree(t_list **lst);
 
-// utils.
-int ft_atoi(const char *str, int *safeguard);
-size_t ft_strlen(const char *str);
-char *append(char *s1, char const *s2);
-char **ft_split(char const *s, char c);
-void *ft_memset(void *s, int c, size_t n);
-void *ft_calloc(size_t number, size_t size);
-size_t ft_strlcpy(char *dest, const char *src, size_t sizedest);
-int counter(char **args);
-int int_compare(t_list *lst);
-int ft_lstcount(t_list **stack);
-void listprinter(t_list **lst);
-int is_sorted(t_list **stackA);
-
-// parsing.
-t_list *parser(char **str);
-void ft_lstadd_back(t_list **lst, t_list *n);
-void ft_lstclear(t_list **lst, void (*del)(void *));
-t_list *ft_lstnew(int content);
-char **cleaner(char **argv);
-int checker(char *argv);
-int int_compare(t_list *lst);
-char **cleaner(char **argv);
-int listcreator(t_list **stackA, char**matrix);
-
+// movements
+void  sa(t_list **stA, char c);
+void  sb(t_list **stB, char c);
+void  ss(t_list **stA, t_list **stB);
+void  pb(t_list **stA, t_list **stB);
+void  pa(t_list **stA, t_list **stB);
+void  ra(t_list **stA, char c);
+void  rb(t_list **stB, char c);
+void  rr(t_list **stA, t_list **stB);
+void  rra(t_list **stA, char c);
+void  rrb(t_list **stB, char c);
+void  rrr(t_list **stA, t_list **stB);
 
 // Sorting
-void ft_sort2(t_list **stackA);
-void ft_sort3(t_list **stackA, t_list **stackB);
-void ft_sort4(t_list **stacks, t_list **stackB);
-int ft_finder(t_list *stacks);
-void ft_bubble(t_list **lst);
+void  sort2(t_list **stackA);
+void  sort3(t_list **stackA);
+void  sort4(t_list **stacks, t_list **stackB);
+void  bubblesort(t_list **lst);
 
-
+// utils.
+size_t  ft_strlen(const char *str);
+size_t  ft_strlcpy(char *dest, const char *src, size_t sizedest);
+long    ft_atol(const char *str);
+char    *append(char *s1, char const *s2);
+char    **ft_split(char const *s, char c);
+void    *ft_memset(void *s, int c, size_t n);
+void    *ft_calloc(size_t number, size_t size);
+void    listprinter(t_list **stack, char c);
+void    ft_bzero(void *s, size_t n);
+void    ft_putnbr(int n);
+void    lstadd_back(t_list **lst, t_list *n);
+void    ft_lstclear(t_list **lst, void (*del)(void *));
+int     checker(char *str);
+int     counter(char **args);
+int     intcompare(t_list **stA);
+int     lstcount(t_list **stack);
+int     is_sorted(t_list **stackA);
+void    indexing(t_list **stack);
+t_list  *parser(char **str);
+t_list  *lstnew(long content);
+t_list  *cleaner(char **argv);
+t_list  *cleaner(char **argv);
+t_list  *listcreator(char**matrix);
 
 #endif

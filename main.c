@@ -10,13 +10,14 @@ int main(int argc, char **argv)
   t_list *stackB;
 
   stackB = NULL;
-  stackA = parser(argv);
+  stackA = NULL;
+  stackA = cleaner(argv);
   if (!stackA)
     return (1);
-  ft_bubble(&stackA);
+  bubblesort(&stackA);
   
   push_swap(&stackA, &stackB);
-  lstclear(&stackA);
+  lstfree(&stackA);
 
   return (0);
 }

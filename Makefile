@@ -1,17 +1,17 @@
 
 NAME = push_swap.a
 SOURCES = \
-	./error/error.c ./error/lstclear.c ./error/charfree.c ./movements/pa.c \
+	./error/error.c ./error/lstfree.c ./error/charfree.c ./movements/pa.c \
 	./movements/pb.c ./movements/ra.c ./movements/rb.c ./movements/rr.c \
 	./movements/sa.c ./movements/sb.c ./movements/ss.c ./movements/rra.c \
-	./movements/rrb.c ./movements/rrr.c ./parsing/lstnew.c ./parsing/checker.c \
-	./parsing/cleaner.c ./parsing/parsing.c ./parsing/intcompare.c \
-	./parsing/lstadd_back.c ./sorting/sort2.c ./sorting/sorter3.c \
-	./sorting/sorter4.c ./sorting/sorter5.c ./sorting/bubblesort.c \
-	./utils/atoi.c ./utils/free.c ./utils/split.c ./utils/utils.c \
-	./utils/append.c ./utils/calloc.c ./utils/memset.c ./utils/strlen.c \
-	./utils/counter.c ./utils/strlcpy.c ./utils/issorted.c ./utils/lstcount.c \
-	./utils/listprinter.c push_swap.c
+	./movements/rrb.c ./movements/rrr.c ./utils/lstnew.c ./utils/checker.c \
+	./utils/cleaner.c ./utils/intcompare.c ./utils/strlcpy.c \
+	./utils/lstaddback.c ./sorting/sort2.c ./sorting/sort3.c \
+	./sorting/sort4.c ./sorting/sort5.c ./sorting/bubblesort.c \
+	./utils/atol.c ./utils/split.c ./utils/putnbr.c ./utils/strlcpy.c \
+	./utils/append.c ./utils/calloc.c ./utils/strlen.c ./utils/bzero.c\
+	./utils/strlcpy.c ./utils/issorted.c ./utils/lstcount.c ./utils/listcreator.c\
+	./utils/listprinter.c ./utils/index.c push_swap.c
 
 OBJECTS = $(SOURCES:.c=.o)
 

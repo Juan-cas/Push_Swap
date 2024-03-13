@@ -5,13 +5,14 @@ void push_swap(t_list **stackA, t_list **stackB)
 {
   int i;
 
-  i = ft_lstcount(stackA);
+  i = lstcount(stackA);
+  listprinter(stackB, 'B');
   if (i == 2)
-    ft_sort2(stackA);
+    sort2(stackA);
   if (i == 3)
-    ft_sort3(stackA, stackB);
-  listprinter(stackA);
-  if (i == 4)
-    ft_sort4(&stackA, stackB);
+    sort3(stackA);
+  listprinter(stackA, 'A');
+  // if (i == 4)
+    // ft_sort4(stackA, stackB);
 
 }
