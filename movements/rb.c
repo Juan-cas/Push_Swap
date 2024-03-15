@@ -1,23 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rb.c                                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: juan-cas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/15 19:59:56 by juan-cas          #+#    #+#             */
+/*   Updated: 2024/03/15 19:59:57 by juan-cas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void rb(t_list **stB, char c)
-{ 
-  if ((*stB)->next == NULL)
-    return ;
-  t_list *firstnode;
-  t_list *secondnode;
+void	rb(t_list **stB, char c)
+{
+	t_list	*firstnode;
+	t_list	*secondnode;
 
-  firstnode = *stB;
-  secondnode = *stB;
-  *stB = (*stB)->next;
-  while (secondnode->next != NULL)
-  {
-    secondnode = secondnode->next;
-  }
-  firstnode->next = NULL;
-  secondnode->next = firstnode;
-  if (c == 'p')
-    write (1, "rb", 2);
+	if ((*stB)->next == NULL)
+		return ;
+	firstnode = *stB;
+	secondnode = *stB;
+	*stB = (*stB)->next;
+	while (secondnode->next != NULL)
+	{
+		secondnode = secondnode->next;
+	}
+	firstnode->next = NULL;
+	secondnode->next = firstnode;
+	if (c == 'p')
+		write(1, "rb", 2);
 }
-

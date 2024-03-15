@@ -1,13 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ss.c                                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: juan-cas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/15 20:00:52 by juan-cas          #+#    #+#             */
+/*   Updated: 2024/03/15 20:00:53 by juan-cas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void ss(t_list **stA, t_list **stB)
+void	ss(t_list **stA, t_list **stB)
 {
-  if (*stA == NULL || (*stA)->next == NULL)
-    return ;
-  if (*stB == NULL || (*stB)->next == NULL)
-    return ;
-  sa(stA, 'x');
-  sb(stB, 'x');
-  write(1, "ss", 2);
+	if (*stA == NULL || (*stA)->next == NULL)
+		return ;
+	if (*stB == NULL || (*stB)->next == NULL)
+		return ;
+	sa(stA, 'x');
+	sb(stB, 'x');
+	write(1, "ss", 2);
 }

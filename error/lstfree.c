@@ -1,14 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lstfree.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: juan-cas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/15 19:59:25 by juan-cas          #+#    #+#             */
+/*   Updated: 2024/03/15 19:59:27 by juan-cas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void lstfree(t_list **stA)
+void	lstfree(t_list **stA)
 {
-  t_list *prev;
+	t_list	*prev;
 
-  while (*stA != NULL)
-  {
-    prev = *stA;
-    *stA = (*stA)->next;
-    free(prev);
-  }
+	while (*stA != NULL)
+	{
+		prev = *stA;
+		*stA = (*stA)->next;
+		free(prev);
+	}
 }

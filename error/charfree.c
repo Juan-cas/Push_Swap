@@ -1,14 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   charfree.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: juan-cas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/15 19:59:08 by juan-cas          #+#    #+#             */
+/*   Updated: 2024/03/15 19:59:13 by juan-cas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include "../push_swap.h"
 
-void charfree(char **matrix)
+void	charfree(char **matrix)
 {
-  int i;
+	int	i;
 
-  i = -1;
-  while (matrix[++i])
-  {
-    free(matrix[i]);
-  }
-  free(matrix);
+	i = -1;
+	while (matrix[++i])
+	{
+		free(matrix[i]);
+	}
+	free(matrix);
 }

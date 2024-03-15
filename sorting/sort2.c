@@ -1,11 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort2.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: juan-cas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/15 20:01:08 by juan-cas          #+#    #+#             */
+/*   Updated: 2024/03/15 20:01:09 by juan-cas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void sort2(t_list **stA)
+void	sort2(t_list **stA)
 {
-  t_list *node;
+	t_list	*node;
 
-  node = *stA;
-  if (node->fpos > node->next->fpos)
-    sa(stA, 'p');
+	node = *stA;
+	if (node->fpos > node->next->fpos)
+		sa(stA, 'p');
 }
