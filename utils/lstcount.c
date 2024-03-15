@@ -9,6 +9,9 @@ int lstcount(t_list **stack)
   i = 0;
   node = *stack;
   while (node != NULL)
+  {
     i++;
+    node = node->next;
+  }
   return (i);  
 }

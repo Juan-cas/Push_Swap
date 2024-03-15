@@ -8,7 +8,7 @@ void bubblesort(t_list **stA)
   int     i;
 
   comparer = *stA;
-  while (comparer == NULL)
+  while (comparer != NULL)
   {
     compared = *stA;
     i = 1;

@@ -4,27 +4,30 @@
 int checker(char *str)
 {
   int i;
-  int j;
+  int digitFound;
+  int length;
 
-  i = 0;
-  j = 0;
-  while (str[i])
+  digitFound = 0;
+  i = -1;
+  length = ft_strlen(str);
+
+  while (str[++i] != '\0')
   {
-    if ((str[i] == '-' || str[i] == '+') && str[i - 1] == ' '
-        && str[i + 1] > '0' && str[i + 1] < '9')
-      i++;
-    else if (str[i] > '0' && str[i] < '9')
+    if (!ft_isspace(str[i]) && !ft_issign(str[i]) && !ft_isdigit(str[i]))
+      return (1); 
+    if (ft_issign(str[i]))
     {
-      j = 1;
-      i++;
+      if (i + 1 <= length && !ft_isdigit(str[i + 1]))
+        return (1);
+      if (i > 0 && str[i - 1] != ' ')
+        return (1);
     }
-    else if (str[i] == ' ')
-      i++;
-    else 
-      return (1);
+    if (ft_isdigit(str[i]))
+      digitFound++;
   }
-  if (j == 1)
+  if (digitFound > 0)
+  {
     return (0);
-  else
-    return (1);
+  }
+  return (1);
 }

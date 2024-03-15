@@ -8,6 +8,6 @@ void	*ft_calloc(size_t number, size_t size)
 	str = (void *)malloc(number * size);
 	if (!str)
 		return (NULL);
-  ft_bzero(&str, number);
+	ft_memset(str, 0, number * size);
 	return (str);
 }

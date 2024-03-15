@@ -6,7 +6,7 @@ t_list *cleaner(char **argv)
   char    **matrix;
   char    *str;
   int     i;
-  // char    *oldptr;
+  char    *oldptr;
   t_list  *stA;
 
   i = 0;
@@ -14,9 +14,12 @@ t_list *cleaner(char **argv)
   stA = NULL;
   while (argv[++i])
   {
-    // oldptr = str;
+    oldptr = str;
     str = append(str, argv[i]);
-    // free(oldptr);
+    if (!str)
+      return (NULL);
+    if (oldptr != NULL)
+      free(oldptr);
   }
   if (checker(str))
     return (free(str), NULL);
@@ -28,5 +31,5 @@ t_list *cleaner(char **argv)
     return (charfree(matrix), NULL);
   if (intcompare(&stA))
     return (charfree(matrix), lstfree(&stA), NULL);
-  return (charfree(matrix), stA);
+  return (charfree(matrix), free(str), stA);
 }

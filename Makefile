@@ -9,14 +9,15 @@ SOURCES = \
 	./utils/lstaddback.c ./sorting/sort2.c ./sorting/sort3.c \
 	./sorting/sort4.c ./sorting/sort5.c ./sorting/bubblesort.c \
 	./utils/atol.c ./utils/split.c ./utils/putnbr.c ./utils/strlcpy.c \
-	./utils/append.c ./utils/calloc.c ./utils/strlen.c ./utils/bzero.c\
+	./utils/append.c ./utils/calloc.c ./utils/strlen.c ./utils/memset.c \
 	./utils/strlcpy.c ./utils/issorted.c ./utils/lstcount.c ./utils/listcreator.c\
-	./utils/listprinter.c ./utils/index.c push_swap.c
+	./utils/listprinter.c ./utils/index.c ./utils/isdigit.c push_swap.c \
+	./utils/isdigit.c ./utils/issign.c ./utils/isspace.c
 
 OBJECTS = $(SOURCES:.c=.o)
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
 
 AR = ar
 ARFLAGS = -r
