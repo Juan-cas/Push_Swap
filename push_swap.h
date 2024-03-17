@@ -23,6 +23,7 @@
 typedef struct t_list
 {
 	struct t_list	*next;
+  struct t_list *prev;
 	long			data;
 	int				pos;
 	int				fpos;
