@@ -15,12 +15,15 @@
 void	push_swap(t_list **stackA, t_list **stackB)
 {
 	int	i;
+  int j;
 
 	i = lstcount(stackA);
 	listprinter(stackB, 'B');
-	if (i == 2)
-		sort2(stackA);
-	if (i == 3)
-		sort3(stackA);
+	// if (i == 2)
+		// sort2(stackA);
+	// if (i == 3)
+		// sort3(stackA);
+  j = pibot(stackA);
+  printf ("the number of nodes is: %d and the pibot is: %d\n", i, j);
 	listprinter(stackA, 'A');
 }

@@ -7,7 +7,7 @@ SOURCES = \
 	./movements/rrb.c ./movements/rrr.c ./utils/lstnew.c ./utils/checker.c \
 	./utils/cleaner.c ./utils/intcompare.c ./utils/strlcpy.c \
 	./utils/lstaddback.c ./sorting/sort2.c ./sorting/sort3.c \
-	./sorting/bubblesort.c ./sorting/biggest.c \
+	./sorting/bubblesort.c ./sorting/biggest.c ./utils/pibot.c \
 	./utils/atol.c ./utils/split.c ./utils/putnbr.c ./utils/strlcpy.c \
 	./utils/append.c ./utils/calloc.c ./utils/strlen.c ./utils/memset.c \
 	./utils/strlcpy.c ./utils/issorted.c ./utils/lstcount.c ./utils/listcreator.c\

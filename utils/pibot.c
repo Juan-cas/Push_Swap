@@ -9,6 +9,7 @@ int pibot(t_list **stack)
   int     i;
 
   i = 0;
+  node = *stack;
   while (node->next != NULL)
   {
     if (node->fpos < node->next->fpos)

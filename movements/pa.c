@@ -20,6 +20,7 @@ void	pa(t_list **stA, t_list **stB)
 		return ;
 	firstnode = *stB;
 	*stB = (*stB)->next;
+  *stB->prev = NULL;
 	firstnode->next = *stA;
 	*stA = firstnode;
 	write(1, "pa", 2);
