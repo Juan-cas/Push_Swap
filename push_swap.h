@@ -57,6 +57,7 @@ void				sort4(t_list **stacks, t_list **stackB);
 void				bubblesort(t_list **lst);
 
 // utils.
+int           biggest(t_list **stA);
 size_t				ft_strlen(const char *str);
 size_t				ft_strlcpy(char *dest, const char *src, size_t sizedest);
 long				ft_atol(const char *str);

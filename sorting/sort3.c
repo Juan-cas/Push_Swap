@@ -5,12 +5,15 @@ void	sort3(t_list **stA)
 {
 	t_list	*fn;
 	t_list	*sn;
+  int     highest;
 
+  highest = biggest(stA);
+  printf("highest contains: %d", highest);
 	fn = *stA;
 	sn = (*stA)->next;
-	if (fn->fpos == 3)
+	if (fn->data == highest)
 		ra(stA, 'p');
-	else if (sn->fpos == 3)
+	else if (sn->data == highest)
 		rra(stA, 'p');
 	if (fn->data > sn->data)
 		sa(stA, 'p');
