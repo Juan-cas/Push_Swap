@@ -26,6 +26,7 @@ typedef struct t_list
 	long			data;
 	int				pos;
 	int				fpos;
+  int       half;
 	struct t_list	*stackA;
 	struct t_list	*stackB;
 }					t_list;

@@ -16,12 +16,19 @@ void	indexing(t_list **stack)
 {
 	t_list	*node;
 	int		i;
+  int   AoB;
 
 	i = 1;
+  AoB = lstcount(stack) / 2;
 	node = *stack;
 	while (node != NULL)
 	{
 		node->pos = i;
+    if (i <= AoB)
+      node->half = 0;
+    else 
+      node->half = 1;
 		node = node->next;
+    i++;
 	}
 }
