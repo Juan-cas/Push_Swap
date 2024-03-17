@@ -86,5 +86,7 @@ t_list				*lstnew(long content);
 t_list				*cleaner(char **argv);
 t_list				*cleaner(char **argv);
 t_list				*listcreator(char **matrix);
+t_list        *lastnode(t_list **stack);
+int           pibot(t_list **stack);
 
 #endif
