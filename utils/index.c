@@ -16,12 +16,18 @@ void	indexing(t_list **stack)
 {
 	t_list	*node;
 	int		i;
+  int   j;
 
+  j = lstcount(stack) / 2;
 	i = 1;
 	node = *stack;
 	while (node != NULL)
 	{
 		node->pos = i;
+    if (i <= j)
+      node->above_median = false;
+    else 
+      node->above_median = true;
 		node = node->next;
 	}
 }

@@ -19,6 +19,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdboo.h>
 
 typedef struct t_list
 {
@@ -26,8 +27,12 @@ typedef struct t_list
 	long			data;
 	int				pos;
 	int				fpos;
+  int       push_price;
+  bool      above_median;
+  bool      cheapest;
 	struct t_list	*stackA;
 	struct t_list	*stackB;
+  struct t_list *target_node;
 }					t_list;
 
 void				push_swap(t_list **stackA, t_list **stackB);

@@ -14,6 +14,9 @@
 
 int	lstcount(t_list **stack)
 {
+  if (!stack)
+    return (0);
+
 	int		i;
 	t_list	*node;
 
