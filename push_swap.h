@@ -24,12 +24,17 @@
 typedef struct t_list
 {
 	struct t_list	*next;
+  struct t_list *prev;
 	long			data;
 	int				pos;
 	int				fpos;
+<<<<<<< HEAD
   int       push_price;
   bool      above_median;
   bool      cheapest;
+=======
+  int       half;
+>>>>>>> bb9e5483d9a1a0f126aade6a6047ce4b2a905642
 	struct t_list	*stackA;
 	struct t_list	*stackB;
   struct t_list *target_node;
@@ -89,5 +94,7 @@ t_list				*lstnew(long content);
 t_list				*cleaner(char **argv);
 t_list				*cleaner(char **argv);
 t_list				*listcreator(char **matrix);
+t_list        *lastnode(t_list **stack);
+int           pibot(t_list **stack);
 
 #endif

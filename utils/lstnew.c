@@ -21,5 +21,6 @@ t_list	*lstnew(long content)
 		return (NULL);
 	big_list->data = content;
 	big_list->next = NULL;
+  big_list->prev = NULL;
 	return (big_list);
 }

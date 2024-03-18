@@ -1,7 +1,20 @@
 
 #include "../push_swap.h"
 
-// verificar la longitud de los nodos del stack
-// pushear a b todos los nodos hasta que solo queden 3
-// sortear los 3 nodos que quedan
-// 
+void sort4(t_list **stA, t_list **stB)
+{
+  t_list  *node;
+  int     i;
+
+  node = *stA;
+  i = 1;
+  while (node)
+  {
+    if (node->fpos != 1)
+      i++;
+    if (node->fpos == 1)
+      break ;
+    node = node->next;
+  }
+  
+}

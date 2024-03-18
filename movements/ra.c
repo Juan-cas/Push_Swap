@@ -26,8 +26,10 @@ void	ra(t_list **stA, char c)
 		secondnode = secondnode->next;
 	}
 	*stA = (*stA)->next;
+  *stA->prev = NULL;
 	secondnode->next = firstnode;
 	firstnode->next = NULL;
+  firstnode->prev = secondnode;
 	if (c == 'p')
 		write(1, "ra", 2);
 }
