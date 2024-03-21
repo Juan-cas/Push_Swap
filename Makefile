@@ -5,14 +5,14 @@ SOURCES = \
 	./movements/pb.c ./movements/ra.c ./movements/rb.c ./movements/rr.c \
 	./movements/sa.c ./movements/sb.c ./movements/ss.c ./movements/rra.c \
 	./movements/rrb.c ./movements/rrr.c ./utils/lstnew.c ./utils/checker.c \
-	./utils/cleaner.c ./utils/intcompare.c ./utils/strlcpy.c \
+	./utils/cleaner.c ./utils/intcompare.c ./utils/strlcpy.c ./sorting/sort4.c\
 	./utils/lstaddback.c ./sorting/sort2.c ./sorting/sort3.c \
 	./sorting/bubblesort.c ./sorting/biggest.c ./utils/pibot.c \
 	./utils/atol.c ./utils/split.c ./utils/putnbr.c ./utils/strlcpy.c \
 	./utils/append.c ./utils/calloc.c ./utils/strlen.c ./utils/memset.c \
 	./utils/strlcpy.c ./utils/issorted.c ./utils/lstcount.c ./utils/listcreator.c\
 	./utils/listprinter.c ./utils/index.c ./utils/isdigit.c push_swap.c \
-	./utils/isdigit.c ./utils/issign.c ./utils/isspace.c
+	./utils/isdigit.c ./utils/issign.c ./utils/isspace.c ./utils/lastnode.c \
 
 OBJECTS = $(SOURCES:.c=.o)
 

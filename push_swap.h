@@ -19,7 +19,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdboo.h>
+# include <stdbool.h>
 
 typedef struct t_list
 {
@@ -76,6 +76,7 @@ void				sort2(t_list **stackA);
 void				sort3(t_list **stackA);
 void				sort4(t_list **stacks, t_list **stackB);
 void				bubblesort(t_list **lst);
+void sort4(t_list **stA, t_list **stB);
 
 // utils.
 int           biggest(t_list **stA);

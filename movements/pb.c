@@ -20,8 +20,8 @@ void	pb(t_list **stA, t_list **stB)
 		return ;
 	firstnode = *stA;
 	*stA = (*stA)->next;
-  *stA->prev = NULL;
+  (*stA)->prev = NULL;
 	firstnode->next = *stB;
 	*stB = firstnode;
-	write(1, "pb", 2);
+	write(1, "pb\n", 3);
 }

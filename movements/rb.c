@@ -22,7 +22,7 @@ void	rb(t_list **stB, char c)
 	firstnode = *stB;
 	secondnode = *stB;
 	*stB = (*stB)->next;
-  *stB->prev = NULL;
+  (*stB)->prev = NULL;
 	while (secondnode->next != NULL)
 	{
 		secondnode = secondnode->next;

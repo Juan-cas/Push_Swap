@@ -8,7 +8,6 @@ void	sort3(t_list **stA)
   int     highest;
 
   highest = biggest(stA);
-  printf("highest contains: %d", highest);
 	fn = *stA;
 	sn = (*stA)->next;
 	if (fn->data == highest)

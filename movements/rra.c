@@ -33,5 +33,5 @@ void	rra(t_list **stA, char c)
   secondnode->prev = NULL;
 	*stA = secondnode;
 	if (c == 'p')
-		write(1, "rra", 3);
+		write(1, "rra\n", 4);
 }

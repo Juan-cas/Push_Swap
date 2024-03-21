@@ -39,5 +39,5 @@ int	checker(char *str)
 	{
 		return (0);
 	}
-	return (1);
+	return (ft_error(), 1);
 }

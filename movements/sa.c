@@ -24,9 +24,8 @@ void	sa(t_list **stA, char c)
 	*stA = (*stA)->next;
 	(*stA)->next = firstnode;
 	firstnode->next = secondnode;
-	write(1, "hola", 4);
 	if (c == 'p')
 	{
-		write(1, "sa", 2);
+		write(1, "sa\n", 3);
 	}
 }

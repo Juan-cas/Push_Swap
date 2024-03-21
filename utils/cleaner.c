@@ -33,7 +33,7 @@ t_list	*cleaner(char **argv)
 			free(oldptr);
 	}
 	if (checker(str))
-		return (free(str), NULL);
+		ft_error();
 	matrix = ft_split(str, ' ');
 	if (!matrix)
 		return (free(str), NULL);

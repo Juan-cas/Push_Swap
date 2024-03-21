@@ -12,18 +12,16 @@
 
 #include "push_swap.h"
 
-void	push_swap(t_list **stackA, t_list **stackB)
+void	push_swap(t_list **stA, t_list **stB)
 {
 	int	i;
-  int j;
 
-	i = lstcount(stackA);
-	listprinter(stackB, 'B');
-	// if (i == 2)
-		// sort2(stackA);
-	// if (i == 3)
-		// sort3(stackA);
-  j = pibot(stackA);
-  printf ("the number of nodes is: %d and the pibot is: %d\n", i, j);
-	listprinter(stackA, 'A');
+	i = lstcount(stA);
+	if (i == 2)
+		sort2(stA);
+	if (i == 3)
+		sort3(stA);
+  if (i == 4)
+    sort4(stA, stB);
+  listprinter(stA, 'A');
 }
