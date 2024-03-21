@@ -37,6 +37,20 @@ typedef struct t_list
   struct t_list *target_node;
 }					t_list;
 
+
+typedef enum {
+  PA,
+  PB,
+  SA,
+  SB,
+  RA,
+  RB,
+  RR,
+  RRA,
+  RRB,
+  RRR
+} movements;
+
 void				push_swap(t_list **stackA, t_list **stackB);
 
 // error handling.

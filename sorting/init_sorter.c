@@ -3,18 +3,9 @@
 
 void sort4(t_list **stA, t_list **stB)
 {
-  t_list  *node;
-  int     i;
+  indexing(a);
+  indexing(b);
+  set_target_node(stA, stB);
 
-  node = *stA;
-  i = 1;
-  while (node)
-  {
-    if (node->fpos != 1)
-      i++;
-    if (node->fpos == 1)
-      break ;
-    node = node->next;
-  }
   
 }

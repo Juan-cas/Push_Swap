@@ -23,6 +23,6 @@ void sta(t_list **stA, t_list **stB)
       nodeA = nodeA->next;
     }
     if (INT_MAX == best_match)
-      nodeB->target_node = 
+      nodeB->target_node = find_smallest(stA);
   }
 }
