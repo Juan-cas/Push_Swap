@@ -3,6 +3,8 @@
 
 void sort4(t_list **stA, t_list **stB)
 {
+  if(issorted(stA))
+    return ;
   t_list  *node;
   int     i;
 

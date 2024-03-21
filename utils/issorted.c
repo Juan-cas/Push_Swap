@@ -19,7 +19,7 @@ int	issorted(t_list **stA)
 
 	firstnode = *stA;
 	secondnode = (*stA)->next;
-	while (secondnode->next != NULL)
+	while (secondnode != NULL)
 	{
 		if (firstnode->data > secondnode->data)
 			return (0);
