@@ -23,5 +23,7 @@ void	push_swap(t_list **stA, t_list **stB)
 		sort3(stA);
   if (i == 4)
     sort4(stA, stB);
+  if (i == 5)
+    sort5(stA, stB);
   listprinter(stA, 'A');
 }

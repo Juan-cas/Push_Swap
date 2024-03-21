@@ -21,8 +21,8 @@ int	biggest(t_list **stA)
 	highest = node->data;
 	while (node->next != NULL)
 	{
-		if (node->data < node->next->data)
-			highest = node->next->data;
+		if (highest < node->data)
+			highest = node->data;
 		node = node->next;
 	}
 	return (highest);

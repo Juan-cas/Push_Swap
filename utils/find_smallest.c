@@ -5,15 +5,23 @@ t_list  *find_smallest(t_list **stack)
 {
   t_list *nodeA;
   t_list *final_node;
+  int     i;
 
-  nodeA = *stack;
-  while (nodeA->next != NULL)
+  i = 1;
+  while (i < 3)
   {
-    if (nodeA->fpos < nodeA->next->fpos)
-      final_node = nodeA;
-    nodeA = nodeA->next;
+    nodeA = *stack;
+    final_node = NULL;
+    while (nodeA != NULL)
+    {
+      if (nodeA->fpos == i)
+      {
+        final_node = nodeA;
+        return (final_node);
+      }
+      nodeA = nodeA->next;
+    }
+    i++;
   }
-  if (nodeA->prev->fpos > nodeA->fpos)
-    final_node = nodeA;
   return (final_node);
 }

@@ -22,8 +22,9 @@ int	issorted(t_list **stA)
 	while (secondnode->next != NULL)
 	{
 		if (firstnode->data > secondnode->data)
-			return (1);
+			return (0);
 		secondnode = secondnode->next;
+    firstnode = firstnode->next;
 	}
-	return (0);
+	return (1);
 }

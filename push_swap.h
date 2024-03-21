@@ -77,8 +77,11 @@ void				sort3(t_list **stackA);
 void				sort4(t_list **stacks, t_list **stackB);
 void				bubblesort(t_list **lst);
 void sort4(t_list **stA, t_list **stB);
+void sort5(t_list **stA, t_list **stB);
 
 // utils.
+int where_small(t_list **stA, t_list *node);
+t_list  *find_smallest(t_list **stack);
 int           biggest(t_list **stA);
 size_t				ft_strlen(const char *str);
 size_t				ft_strlcpy(char *dest, const char *src, size_t sizedest);
@@ -96,7 +99,7 @@ int					checker(char *str);
 int					counter(char **args);
 int					intcompare(t_list **stA);
 int					lstcount(t_list **stack);
-int					is_sorted(t_list **stackA);
+int					issorted(t_list **stackA);
 int					ft_isdigit(int c);
 int					ft_issign(int c);
 int					ft_isspace(int c);
