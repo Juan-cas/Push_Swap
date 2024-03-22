@@ -21,7 +21,7 @@ void	indexing(t_list **stack)
   int   j;
 
   j = lstcount(stack) / 2;
-	i = 1;
+	i = 0;
 	node = *stack;
 	while (node != NULL)
 	{
