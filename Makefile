@@ -13,7 +13,8 @@ SOURCES = \
 	./utils/strlcpy.c ./utils/issorted.c ./utils/lstcount.c ./utils/listcreator.c\
 	./utils/listprinter.c ./utils/index.c ./utils/isdigit.c push_swap.c \
 	./utils/isdigit.c ./utils/issign.c ./utils/isspace.c ./utils/lastnode.c \
-	./utils/where_small.c ./utils/find_smallest.c ./utils/issorted.c \
+	./utils/where_small.c ./utils/find_smallest.c ./utils/issorted.c ./sorting/init_sorter.c \
+	./sorting/init_sorter.c
 
 OBJECTS = $(SOURCES:.c=.o)
 

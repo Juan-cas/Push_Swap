@@ -6,7 +6,7 @@
 /*   By: juan-cas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 20:02:23 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/03/15 20:02:24 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/03/22 20:57:23 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	issorted(t_list **stA)
 		if (firstnode->data > secondnode->data)
 			return (0);
 		secondnode = secondnode->next;
-    firstnode = firstnode->next;
+		firstnode = firstnode->next;
 	}
 	return (1);
 }

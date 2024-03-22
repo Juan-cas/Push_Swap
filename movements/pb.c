@@ -6,7 +6,7 @@
 /*   By: juan-cas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 19:59:39 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/03/15 19:59:41 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/03/22 20:46:12 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	pb(t_list **stA, t_list **stB)
 		return ;
 	firstnode = *stA;
 	*stA = (*stA)->next;
-  (*stA)->prev = NULL;
+	(*stA)->prev = NULL;
 	firstnode->next = *stB;
 	*stB = firstnode;
 	write(1, "pb\n", 3);

@@ -6,7 +6,7 @@
 /*   By: juan-cas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 19:59:56 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/03/15 19:59:57 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/03/22 20:46:19 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ void	rb(t_list **stB, char c)
 	firstnode = *stB;
 	secondnode = *stB;
 	*stB = (*stB)->next;
-  (*stB)->prev = NULL;
+	(*stB)->prev = NULL;
 	while (secondnode->next != NULL)
 	{
 		secondnode = secondnode->next;
 	}
 	firstnode->next = NULL;
 	secondnode->next = firstnode;
-  firstnode->prev = secondnode;
+	firstnode->prev = secondnode;
 	if (c == 'p')
 		write(1, "rb", 2);
 }

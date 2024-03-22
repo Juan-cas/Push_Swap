@@ -6,7 +6,7 @@
 /*   By: juan-cas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 20:00:11 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/03/15 20:00:12 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/03/22 20:46:32 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ void	rra(t_list **stA, char c)
 	}
 	prevnode->next = NULL;
 	secondnode->next = firstnode;
-  firstnode->prev = secondnode;
-  secondnode->prev = NULL;
+	firstnode->prev = secondnode;
+	secondnode->prev = NULL;
 	*stA = secondnode;
 	if (c == 'p')
 		write(1, "rra\n", 4);

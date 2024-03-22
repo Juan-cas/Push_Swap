@@ -6,7 +6,7 @@
 /*   By: juan-cas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 21:04:24 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/03/15 21:04:27 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/03/22 21:07:07 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,41 +15,27 @@
 
 # include <limits.h>
 # include <stdarg.h>
+# include <stdbool.h>
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdbool.h>
 
 typedef struct t_list
 {
 	struct t_list	*next;
-  struct t_list *prev;
+	struct t_list	*prev;
 	long			data;
 	int				pos;
 	int				fpos;
-  int       push_price;
-  bool      above_median;
-  bool      cheapest;
-  int       half;
-	struct t_list	*stackA;
-	struct t_list	*stackB;
-  struct t_list *target_node;
+	int				push_price;
+	bool			above_median;
+	bool			cheapest;
+	int				half;
+	struct t_list	*stacka;
+	struct t_list	*stackb;
+	struct t_list	*target_node;
 }					t_list;
-
-
-typedef enum {
-  PA,
-  PB,
-  SA,
-  SB,
-  RA,
-  RB,
-  RR,
-  RRA,
-  RRB,
-  RRR
-} movements;
 
 void				push_swap(t_list **stackA, t_list **stackB);
 
@@ -72,17 +58,18 @@ void				rrb(t_list **stB, char c);
 void				rrr(t_list **stA, t_list **stB);
 
 // Sorting
+void				sorter(t_list **stA, t_list **stB);
 void				sort2(t_list **stackA);
 void				sort3(t_list **stackA);
 void				sort4(t_list **stacks, t_list **stackB);
 void				bubblesort(t_list **lst);
-void sort4(t_list **stA, t_list **stB);
-void sort5(t_list **stA, t_list **stB);
+void				sort4(t_list **stA, t_list **stB);
+void				sort5(t_list **stA, t_list **stB);
 
 // utils.
-int where_small(t_list **stA, t_list *node);
-t_list  *find_smallest(t_list **stack);
-int           biggest(t_list **stA);
+int					where_small(t_list **stA, t_list *node);
+t_list				*find_smallest(t_list **stack);
+int					biggest(t_list **stA);
 size_t				ft_strlen(const char *str);
 size_t				ft_strlcpy(char *dest, const char *src, size_t sizedest);
 long				ft_atol(const char *str);
@@ -109,7 +96,7 @@ t_list				*lstnew(long content);
 t_list				*cleaner(char **argv);
 t_list				*cleaner(char **argv);
 t_list				*listcreator(char **matrix);
-t_list        *lastnode(t_list **stack);
-int           pibot(t_list **stack);
+t_list				*lastnode(t_list **stack);
+int					pibot(t_list **stack);
 
 #endif

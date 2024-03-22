@@ -6,7 +6,7 @@
 /*   By: juan-cas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 21:06:16 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/03/15 21:06:20 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/03/22 20:49:15 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ t_list	*lstnew(long content)
 		return (NULL);
 	big_list->data = content;
 	big_list->next = NULL;
-  big_list->prev = NULL;
+	big_list->prev = NULL;
 	return (big_list);
 }

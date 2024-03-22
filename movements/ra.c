@@ -1,4 +1,4 @@
-/*stA* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ra.c                                               :+:      :+:    :+:   */
@@ -6,7 +6,7 @@
 /*   By: juan-cas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 19:59:48 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/03/15 19:59:49 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/03/22 21:05:14 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ void	ra(t_list **stA, char c)
 		secondnode = secondnode->next;
 	}
 	*stA = (*stA)->next;
-  (*stA)->prev = NULL;
+	(*stA)->prev = NULL;
 	secondnode->next = firstnode;
 	firstnode->next = NULL;
-  firstnode->prev = secondnode;
+	firstnode->prev = secondnode;
 	if (c == 'p')
 		write(1, "ra\n", 3);
 }

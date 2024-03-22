@@ -6,7 +6,7 @@
 /*   By: juan-cas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 20:00:18 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/03/15 20:00:19 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/03/22 20:46:37 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ void	rrb(t_list **stB, char c)
 	}
 	prevnode->next = NULL;
 	secondnode->next = firstnode;
-  firstnode->prev = secondnode;
-  secondnode->prev = NULL;
+	firstnode->prev = secondnode;
+	secondnode->prev = NULL;
 	*stB = secondnode;
 	if (c == 'p')
 		write(1, "rrb", 3);

@@ -6,7 +6,7 @@
 /*   By: juan-cas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 20:01:36 by juan-cas          #+#    #+#             */
-/*   Updated: 2024/03/15 20:01:38 by juan-cas         ###   ########.fr       */
+/*   Updated: 2024/03/22 21:05:39 by juan-cas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ int	checker(char *str)
 			digitFound++;
 	}
 	if (digitFound > 0)
-	{
 		return (0);
-	}
 	return (ft_error(), 1);
 }
