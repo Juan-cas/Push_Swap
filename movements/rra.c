@@ -12,16 +12,16 @@
 
 #include "../push_swap.h"
 
-void	rra(t_list **stA, char c)
+void	rra(t_list **sta, char c)
 {
 	t_list	*firstnode;
 	t_list	*secondnode;
 	t_list	*prevnode;
 
-	if (*stA == NULL || (*stA)->next == NULL)
+	if (*sta == NULL || (*sta)->next == NULL)
 		return ;
-	firstnode = *stA;
-	secondnode = *stA;
+	firstnode = *sta;
+	secondnode = *sta;
 	while (secondnode->next != NULL)
 	{
 		prevnode = secondnode;
@@ -31,7 +31,7 @@ void	rra(t_list **stA, char c)
 	secondnode->next = firstnode;
 	firstnode->prev = secondnode;
 	secondnode->prev = NULL;
-	*stA = secondnode;
+	*sta = secondnode;
 	if (c == 'p')
 		write(1, "rra\n", 4);
 }

@@ -12,30 +12,30 @@
 
 #include "../push_swap.h"
 
-int	checker(char *str)
+void	checker(char *str)
 {
 	int	i;
-	int	digitFound;
+	int	digit_found;
 	int	length;
 
-	digitFound = 0;
+	digit_found = 0;
 	i = -1;
 	length = ft_strlen(str);
 	while (str[++i] != '\0')
 	{
 		if (!ft_isspace(str[i]) && !ft_issign(str[i]) && !ft_isdigit(str[i]))
-			return (1);
+			ft_error();
 		if (ft_issign(str[i]))
 		{
 			if (i + 1 <= length && !ft_isdigit(str[i + 1]))
-				return (1);
+				ft_error();
 			if (i > 0 && str[i - 1] != ' ')
-				return (1);
+				ft_error();
 		}
 		if (ft_isdigit(str[i]))
-			digitFound++;
+			digit_found++;
 	}
-	if (digitFound > 0)
-		return (0);
-	return (ft_error(), 1);
+	if (digit_found > 0)
+		return ;
+	ft_error();
 }

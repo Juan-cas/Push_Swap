@@ -12,22 +12,22 @@
 
 #include "../push_swap.h"
 
-void	sort3(t_list **stA)
+void	sort3(t_list **sta)
 {
 	t_list	*fn;
 	t_list	*sn;
 	int		highest;
 
-	if (issorted(stA))
+	if (issorted(sta))
 		return ;
-	highest = biggest(stA);
-	fn = *stA;
-	sn = (*stA)->next;
+	highest = biggest(sta);
+	fn = *sta;
+	sn = (*sta)->next;
 	if (fn->data == highest)
-		ra(stA, 'p');
+		ra(sta, 'p');
 	else if (sn->data == highest)
-		rra(stA, 'p');
-	fn = *stA;
-	if ((*stA)->data > (*stA)->next->data)
-		sa(stA, 'p');
+		rra(sta, 'p');
+	fn = *sta;
+	if ((*sta)->data > (*sta)->next->data)
+		sa(sta, 'p');
 }

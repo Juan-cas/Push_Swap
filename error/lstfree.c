@@ -12,14 +12,14 @@
 
 #include "../push_swap.h"
 
-void	lstfree(t_list **stA)
+void	lstfree(t_list **sta)
 {
 	t_list	*prev;
 
-	while (*stA != NULL)
+	while (*sta != NULL)
 	{
-		prev = *stA;
-		*stA = (*stA)->next;
+		prev = *sta;
+		*sta = (*sta)->next;
 		free(prev);
 	}
 }

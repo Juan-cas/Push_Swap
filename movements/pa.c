@@ -12,15 +12,15 @@
 
 #include "../push_swap.h"
 
-void	pa(t_list **stA, t_list **stB)
+void	pa(t_list **sta, t_list **stb)
 {
 	t_list	*firstnode;
 
-	if (*stB == NULL)
+	if (*stb == NULL)
 		return ;
-	firstnode = *stB;
-	*stB = (*stB)->next;
-	firstnode->next = *stA;
-	*stA = firstnode;
+	firstnode = *stb;
+	*stb = (*stb)->next;
+	firstnode->next = *sta;
+	*sta = firstnode;
 	write(1, "pa\n", 3);
 }

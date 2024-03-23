@@ -12,19 +12,19 @@
 
 #include "push_swap.h"
 
-void	push_swap(t_list **stA, t_list **stB)
+void	push_swap(t_list **sta, t_list **stb)
 {
 	int	i;
 
-	i = lstcount(stA);
+	i = lstcount(sta);
 	if (i == 2)
-		sort2(stA);
+		sort2(sta);
 	if (i == 3)
-		sort3(stA);
+		sort3(sta);
 	if (i == 4)
-		sort4(stA, stB);
+		sort4(sta, stb);
 	if (i == 5)
-		sort5(stA, stB);
+		sort5(sta, stb);
 	if (i > 5)
-		sorter(stA, stB);
+		sorter(sta, stb);
 }

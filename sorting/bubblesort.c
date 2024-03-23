@@ -12,16 +12,16 @@
 
 #include "../push_swap.h"
 
-void	bubblesort(t_list **stA)
+void	bubblesort(t_list **sta)
 {
 	t_list	*comparer;
 	t_list	*compared;
 	int		i;
 
-	comparer = *stA;
+	comparer = *sta;
 	while (comparer != NULL)
 	{
-		compared = *stA;
+		compared = *sta;
 		i = 1;
 		while (compared != NULL)
 		{

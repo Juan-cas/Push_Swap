@@ -14,18 +14,18 @@
 
 int	main(int argc, char **argv)
 {
-	t_list	*stackA;
-	t_list	*stackB;
+	t_list	*sta;
+	t_list	*stb;
 
 	if (argc < 2)
 		return (ft_error(), 1);
-	stackB = NULL;
-	stackA = NULL;
-	stackA = cleaner(argv);
-	if (!stackA)
+	stb = NULL;
+	sta = NULL;
+	sta = cleaner(argv);
+	if (!sta)
 		return (1);
-	bubblesort(&stackA);
-	push_swap(&stackA, &stackB);
-	lstfree(&stackA);
+	bubblesort(&sta);
+	push_swap(&sta, &stb);
+	lstfree(&sta);
 	return (0);
 }

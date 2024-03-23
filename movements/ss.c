@@ -12,13 +12,13 @@
 
 #include "../push_swap.h"
 
-void	ss(t_list **stA, t_list **stB)
+void	ss(t_list **sta, t_list **stb)
 {
-	if (*stA == NULL || (*stA)->next == NULL)
+	if (*sta == NULL || (*sta)->next == NULL)
 		return ;
-	if (*stB == NULL || (*stB)->next == NULL)
+	if (*stb == NULL || (*stb)->next == NULL)
 		return ;
-	sa(stA, 'x');
-	sb(stB, 'x');
+	sa(sta, 'x');
+	sb(stb, 'x');
 	write(1, "ss", 2);
 }

@@ -12,17 +12,17 @@
 
 #include "../push_swap.h"
 
-void	sa(t_list **stA, char c)
+void	sa(t_list **sta, char c)
 {
 	t_list	*firstnode;
 	t_list	*secondnode;
 
-	if (*stA == NULL || (*stA)->next == NULL)
+	if (*sta == NULL || (*sta)->next == NULL)
 		return ;
-	firstnode = *stA;
-	secondnode = (*stA)->next->next;
-	*stA = (*stA)->next;
-	(*stA)->next = firstnode;
+	firstnode = *sta;
+	secondnode = (*sta)->next->next;
+	*sta = (*sta)->next;
+	(*sta)->next = firstnode;
 	firstnode->next = secondnode;
 	if (c == 'p')
 	{

@@ -12,16 +12,16 @@
 
 #include "../push_swap.h"
 
-void	rrb(t_list **stB, char c)
+void	rrb(t_list **stb, char c)
 {
 	t_list	*firstnode;
 	t_list	*secondnode;
 	t_list	*prevnode;
 
-	if (*stB == NULL || (*stB)->next == NULL)
+	if (*stb == NULL || (*stb)->next == NULL)
 		return ;
-	firstnode = *stB;
-	secondnode = *stB;
+	firstnode = *stb;
+	secondnode = *stb;
 	while (secondnode->next != NULL)
 	{
 		prevnode = secondnode;
@@ -31,7 +31,7 @@ void	rrb(t_list **stB, char c)
 	secondnode->next = firstnode;
 	firstnode->prev = secondnode;
 	secondnode->prev = NULL;
-	*stB = secondnode;
+	*stb = secondnode;
 	if (c == 'p')
 		write(1, "rrb", 3);
 }

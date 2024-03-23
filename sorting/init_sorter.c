@@ -12,13 +12,13 @@
 
 #include "../push_swap.h"
 
-static int	max_bits(t_list **stA)
+static int	max_bits(t_list **sta)
 {
 	t_list	*node;
 	int		max;
 	int		max_bits;
 
-	node = *stA;
+	node = *sta;
 	max = node->fpos;
 	max_bits = 0;
 	while (node)
@@ -32,7 +32,7 @@ static int	max_bits(t_list **stA)
 	return (max_bits);
 }
 
-void	sorter(t_list **stA, t_list **stB)
+void	sorter(t_list **sta, t_list **stb)
 {
 	t_list	*head_a;
 	int		i;
@@ -41,22 +41,22 @@ void	sorter(t_list **stA, t_list **stB)
 	int		mbits;
 
 	i = 0;
-	head_a = *stA;
-	size = lstcount(stA);
-	mbits = max_bits(stA);
+	head_a = *sta;
+	size = lstcount(sta);
+	mbits = max_bits(sta);
 	while (i < mbits)
 	{
 		j = 0;
 		while (j++ < size)
 		{
-			head_a = *stA;
+			head_a = *sta;
 			if (((head_a->fpos >> i) & 1) == 1)
-				ra(stA, 'p');
+				ra(sta, 'p');
 			else
-				pb(stA, stB);
+				pb(sta, stb);
 		}
-		while (lstcount(stB) != 0)
-			pa(stA, stB);
+		while (lstcount(stb) != 0)
+			pa(sta, stb);
 		i++;
 	}
 }

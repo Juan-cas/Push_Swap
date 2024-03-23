@@ -12,11 +12,11 @@
 
 #include "../push_swap.h"
 
-void	sort2(t_list **stA)
+void	sort2(t_list **sta)
 {
 	t_list	*node;
 
-	node = *stA;
+	node = *sta;
 	if (node->fpos > node->next->fpos)
-		sa(stA, 'p');
+		sa(sta, 'p');
 }

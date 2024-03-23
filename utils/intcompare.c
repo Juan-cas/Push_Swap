@@ -12,12 +12,12 @@
 
 #include "../push_swap.h"
 
-int	intcompare(t_list **stA)
+int	intcompare(t_list **sta)
 {
 	t_list	*comparer;
 	t_list	*compared;
 
-	comparer = *stA;
+	comparer = *sta;
 	while (comparer->next != NULL)
 	{
 		compared = comparer->next;

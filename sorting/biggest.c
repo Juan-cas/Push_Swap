@@ -12,12 +12,12 @@
 
 #include "../push_swap.h"
 
-int	biggest(t_list **stA)
+int	biggest(t_list **sta)
 {
 	int		highest;
 	t_list	*node;
 
-	node = *stA;
+	node = *sta;
 	highest = node->data;
 	while (node->next != NULL)
 	{

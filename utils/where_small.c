@@ -12,12 +12,12 @@
 
 #include "../push_swap.h"
 
-int	where_small(t_list **stA, t_list *node)
+int	where_small(t_list **sta, t_list *node)
 {
 	t_list	*comparer;
 	int		i;
 
-	comparer = *stA;
+	comparer = *sta;
 	i = 1;
 	while (comparer)
 	{

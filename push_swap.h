@@ -43,33 +43,34 @@ void				push_swap(t_list **stackA, t_list **stackB);
 void				ft_error(void);
 void				charfree(char **str);
 void				lstfree(t_list **lst);
+void        silent_error();
 
 // movements
-void				sa(t_list **stA, char c);
-void				sb(t_list **stB, char c);
-void				ss(t_list **stA, t_list **stB);
-void				pb(t_list **stA, t_list **stB);
-void				pa(t_list **stA, t_list **stB);
-void				ra(t_list **stA, char c);
-void				rb(t_list **stB, char c);
-void				rr(t_list **stA, t_list **stB);
-void				rra(t_list **stA, char c);
-void				rrb(t_list **stB, char c);
-void				rrr(t_list **stA, t_list **stB);
+void				sa(t_list **sta, char c);
+void				sb(t_list **stb, char c);
+void				ss(t_list **sta, t_list **stb);
+void				pb(t_list **sta, t_list **stb);
+void				pa(t_list **sta, t_list **stb);
+void				ra(t_list **sta, char c);
+void				rb(t_list **stb, char c);
+void				rr(t_list **sta, t_list **stb);
+void				rra(t_list **sta, char c);
+void				rrb(t_list **stb, char c);
+void				rrr(t_list **sta, t_list **stb);
 
 // Sorting
-void				sorter(t_list **stA, t_list **stB);
+void				sorter(t_list **sta, t_list **stb);
 void				sort2(t_list **stackA);
 void				sort3(t_list **stackA);
 void				sort4(t_list **stacks, t_list **stackB);
 void				bubblesort(t_list **lst);
-void				sort4(t_list **stA, t_list **stB);
-void				sort5(t_list **stA, t_list **stB);
+void				sort4(t_list **sta, t_list **stb);
+void				sort5(t_list **sta, t_list **stb);
 
 // utils.
-int					where_small(t_list **stA, t_list *node);
+int					where_small(t_list **sta, t_list *node);
 t_list				*find_smallest(t_list **stack);
-int					biggest(t_list **stA);
+int					biggest(t_list **sta);
 size_t				ft_strlen(const char *str);
 size_t				ft_strlcpy(char *dest, const char *src, size_t sizedest);
 long				ft_atol(const char *str);
@@ -82,9 +83,9 @@ void				ft_bzero(void *s, size_t n);
 void				ft_putnbr(int n);
 void				lstadd_back(t_list **lst, t_list *n);
 void				ft_lstclear(t_list **lst, void (*del)(void *));
-int					checker(char *str);
+void				checker(char *str);
 int					counter(char **args);
-int					intcompare(t_list **stA);
+int					intcompare(t_list **sta);
 int					lstcount(t_list **stack);
 int					issorted(t_list **stackA);
 int					ft_isdigit(int c);

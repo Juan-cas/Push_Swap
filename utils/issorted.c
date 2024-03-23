@@ -12,13 +12,13 @@
 
 #include "../push_swap.h"
 
-int	issorted(t_list **stA)
+int	issorted(t_list **sta)
 {
 	t_list	*firstnode;
 	t_list	*secondnode;
 
-	firstnode = *stA;
-	secondnode = (*stA)->next;
+	firstnode = *sta;
+	secondnode = (*sta)->next;
 	while (secondnode != NULL)
 	{
 		if (firstnode->data > secondnode->data)

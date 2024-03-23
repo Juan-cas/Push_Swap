@@ -12,30 +12,30 @@
 
 #include "../push_swap.h"
 
-void	sort5(t_list **stA, t_list **stB)
+void	sort5(t_list **sta, t_list **stb)
 {
 	t_list	*node;
 	int		i;
 
-	if (issorted(stA))
+	if (issorted(sta))
 		return ;
-	node = find_smallest(stA);
-	i = where_small(stA, node);
+	node = find_smallest(sta);
+	i = where_small(sta, node);
 	if (i == 2)
-		sa(stA, 'p');
+		sa(sta, 'p');
 	else if (i == 3)
 	{
-		ra(stA, 'p');
-		sa(stA, 'p');
+		ra(sta, 'p');
+		sa(sta, 'p');
 	}
 	else if (i == 4)
 	{
-		rra(stA, 'p');
-		rra(stA, 'p');
+		rra(sta, 'p');
+		rra(sta, 'p');
 	}
 	else if (i == 5)
-		rra(stA, 'p');
-	pb(stA, stB);
-	sort4(stA, stB);
-	pa(stA, stB);
+		rra(sta, 'p');
+	pb(sta, stb);
+	sort4(sta, stb);
+	pa(sta, stb);
 }
