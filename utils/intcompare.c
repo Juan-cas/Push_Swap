@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-int	intcompare(t_list **sta)
+void    intcompare(t_list **sta)
 {
 	t_list	*comparer;
 	t_list	*compared;
@@ -24,10 +24,9 @@ int	intcompare(t_list **sta)
 		while (compared != NULL)
 		{
 			if (compared->data == comparer->data)
-				return (1);
+            ft_error();
 			compared = compared->next;
 		}
 		comparer = comparer->next;
 	}
-	return (0);
 }

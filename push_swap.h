@@ -43,7 +43,7 @@ void				push_swap(t_list **stackA, t_list **stackB);
 void				ft_error(void);
 void				charfree(char **str);
 void				lstfree(t_list **lst);
-void        silent_error();
+void                silent_error();
 
 // movements
 void				sa(t_list **sta, char c);
@@ -85,7 +85,7 @@ void				lstadd_back(t_list **lst, t_list *n);
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				checker(char *str);
 int					counter(char **args);
-int					intcompare(t_list **sta);
+void                intcompare(t_list **sta);
 int					lstcount(t_list **stack);
 int					issorted(t_list **stackA);
 int					ft_isdigit(int c);

@@ -31,11 +31,11 @@ t_list	*cleaner(char **argv)
 		if (oldptr != NULL)
 			free(oldptr);
 	}
+    checker(str);
 	matrix = ft_split(str, ' ');
 	if (!matrix)
 		return (free(str), NULL);
 	sta = listcreator(matrix);
-	if (intcompare(&sta))
-		return (charfree(matrix), lstfree(&sta), NULL);
+	intcompare(&sta);
 	return (charfree(matrix), free(str), sta);
 }

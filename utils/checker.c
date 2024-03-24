@@ -14,9 +14,9 @@
 
 void	checker(char *str)
 {
-	int	i;
+	size_t	i;
 	int	digit_found;
-	int	length;
+	size_t	length;
 
 	digit_found = 0;
 	i = -1;
@@ -27,7 +27,7 @@ void	checker(char *str)
 			ft_error();
 		if (ft_issign(str[i]))
 		{
-			if (i + 1 <= length && !ft_isdigit(str[i + 1]))
+			if (i + 1 < length && !ft_isdigit(str[i + 1]))
 				ft_error();
 			if (i > 0 && str[i - 1] != ' ')
 				ft_error();
