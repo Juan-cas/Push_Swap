@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-long 	biggest(t_list **sta)
+long	biggest(t_list **sta)
 {
 	long	highest;
 	t_list	*node;

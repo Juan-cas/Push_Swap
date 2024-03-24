@@ -15,7 +15,7 @@
 void	checker(char *str)
 {
 	size_t	i;
-	int	digit_found;
+	int		digit_found;
 	size_t	length;
 
 	digit_found = 0;

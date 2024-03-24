@@ -24,12 +24,10 @@
 typedef struct t_list
 {
 	struct t_list	*next;
-	struct t_list	*prev;
 	long			data;
 	int				fpos;
 	struct t_list	*stacka;
 	struct t_list	*stackb;
-	struct t_list	*target_node;
 }					t_list;
 
 void				push_swap(t_list **stackA, t_list **stackB);
@@ -38,7 +36,7 @@ void				push_swap(t_list **stackA, t_list **stackB);
 void				ft_error(void);
 void				charfree(char **str);
 void				lstfree(t_list **lst);
-void                silent_error();
+void				silent_error(void);
 
 // movements
 void				sa(t_list **sta, char c);
@@ -65,7 +63,7 @@ void				sort5(t_list **sta, t_list **stb);
 // utils.
 int					where_small(t_list **sta, t_list *node);
 t_list				*find_smallest(t_list **stack);
-long					biggest(t_list **sta);
+long				biggest(t_list **sta);
 size_t				ft_strlen(const char *str);
 size_t				ft_strlcpy(char *dest, const char *src, size_t sizedest);
 long				ft_atol(const char *str);
@@ -80,7 +78,7 @@ void				lstadd_back(t_list **lst, t_list *n);
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				checker(char *str);
 int					counter(char **args);
-void                intcompare(t_list **sta);
+void				intcompare(t_list **sta);
 int					lstcount(t_list **stack);
 int					issorted(t_list **stackA);
 int					ft_isdigit(int c);
