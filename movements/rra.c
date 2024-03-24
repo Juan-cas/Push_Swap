@@ -29,8 +29,6 @@ void	rra(t_list **sta, char c)
 	}
 	prevnode->next = NULL;
 	secondnode->next = firstnode;
-	firstnode->prev = secondnode;
-	secondnode->prev = NULL;
 	*sta = secondnode;
 	if (c == 'p')
 		write(1, "rra\n", 4);

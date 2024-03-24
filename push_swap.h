@@ -26,12 +26,7 @@ typedef struct t_list
 	struct t_list	*next;
 	struct t_list	*prev;
 	long			data;
-	int				pos;
 	int				fpos;
-	int				push_price;
-	bool			above_median;
-	bool			cheapest;
-	int				half;
 	struct t_list	*stacka;
 	struct t_list	*stackb;
 	struct t_list	*target_node;
@@ -70,7 +65,7 @@ void				sort5(t_list **sta, t_list **stb);
 // utils.
 int					where_small(t_list **sta, t_list *node);
 t_list				*find_smallest(t_list **stack);
-int					biggest(t_list **sta);
+long					biggest(t_list **sta);
 size_t				ft_strlen(const char *str);
 size_t				ft_strlcpy(char *dest, const char *src, size_t sizedest);
 long				ft_atol(const char *str);

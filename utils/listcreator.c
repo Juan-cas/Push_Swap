@@ -24,7 +24,7 @@ t_list	*listcreator(char **matrix)
 	{
 		node = lstnew(atol(matrix[i]));
 		if (!node)
-     silent_error();
+            silent_error();
 		if (node->data < INT_MIN || node->data > INT_MAX)
 			silent_error();
 		lstadd_back(&sta, node);

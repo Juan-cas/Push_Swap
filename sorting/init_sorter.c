@@ -41,7 +41,6 @@ void	sorter(t_list **sta, t_list **stb)
 	int		mbits;
 
 	i = 0;
-	head_a = *sta;
 	size = lstcount(sta);
 	mbits = max_bits(sta);
 	while (i < mbits)

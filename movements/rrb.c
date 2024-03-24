@@ -29,8 +29,6 @@ void	rrb(t_list **stb, char c)
 	}
 	prevnode->next = NULL;
 	secondnode->next = firstnode;
-	firstnode->prev = secondnode;
-	secondnode->prev = NULL;
 	*stb = secondnode;
 	if (c == 'p')
 		write(1, "rrb", 3);

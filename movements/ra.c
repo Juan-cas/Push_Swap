@@ -22,14 +22,10 @@ void	ra(t_list **sta, char c)
 	firstnode = *sta;
 	secondnode = *sta;
 	while (secondnode->next != NULL)
-	{
 		secondnode = secondnode->next;
-	}
 	*sta = (*sta)->next;
-	(*sta)->prev = NULL;
 	secondnode->next = firstnode;
 	firstnode->next = NULL;
-	firstnode->prev = secondnode;
 	if (c == 'p')
 		write(1, "ra\n", 3);
 }

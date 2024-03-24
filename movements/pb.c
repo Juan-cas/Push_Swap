@@ -20,7 +20,6 @@ void	pb(t_list **sta, t_list **stb)
 		return ;
 	firstnode = *sta;
 	*sta = (*sta)->next;
-	(*sta)->prev = NULL;
 	firstnode->next = *stb;
 	*stb = firstnode;
 	write(1, "pb\n", 3);

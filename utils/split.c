@@ -71,7 +71,7 @@ static char	**filler(const char *s, char **lst, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**lst;
-	int		wordcount;
+	size_t		wordcount;
 
 	if (!s)
 		return (NULL);

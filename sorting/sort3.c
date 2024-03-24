@@ -16,7 +16,7 @@ void	sort3(t_list **sta)
 {
 	t_list	*fn;
 	t_list	*sn;
-	int		highest;
+	long	highest;
 
 	if (issorted(sta))
 		return ;
@@ -27,7 +27,6 @@ void	sort3(t_list **sta)
 		ra(sta, 'p');
 	else if (sn->data == highest)
 		rra(sta, 'p');
-	fn = *sta;
 	if ((*sta)->data > (*sta)->next->data)
 		sa(sta, 'p');
 }

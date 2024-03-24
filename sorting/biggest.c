@@ -12,9 +12,9 @@
 
 #include "../push_swap.h"
 
-int	biggest(t_list **sta)
+long 	biggest(t_list **sta)
 {
-	int		highest;
+	long	highest;
 	t_list	*node;
 
 	node = *sta;

@@ -22,14 +22,12 @@ void	rb(t_list **stb, char c)
 	firstnode = *stb;
 	secondnode = *stb;
 	*stb = (*stb)->next;
-	(*stb)->prev = NULL;
 	while (secondnode->next != NULL)
 	{
 		secondnode = secondnode->next;
 	}
 	firstnode->next = NULL;
 	secondnode->next = firstnode;
-	firstnode->prev = secondnode;
 	if (c == 'p')
 		write(1, "rb", 2);
 }
