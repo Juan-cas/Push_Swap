@@ -26,6 +26,5 @@ void	lstadd_back(t_list **lst, t_list *n)
 		while (holder->next)
 			holder = holder->next;
 		holder->next = n;
-		n->prev = holder;
 	}
 }
